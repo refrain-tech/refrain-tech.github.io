@@ -9,7 +9,7 @@ keyword === "" ? ref.limitToLast(4).once("value", snapshot => {
 }) : ref.once("value", snapshot => {
 	YFoSPTA3.innerHTML += `<li class = "q6kpK1jH"><a class = "TnBfB6P0" href = "/?keyword=${keyword}"><span>検索結果: ${keyword}</span></a></li>`;
 	const val = snapshot.val();
-	if (val !== null) Object.values(key).filter(value => {
+	if (val !== null) Object.values(val).filter(value => {
 		console.log(value);
 		return String(value.title).includes(keyword);
 	}).forEach(createListItem, val);
