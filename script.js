@@ -11,7 +11,7 @@ keyword === "" ? ref.limitToLast(4).once("value", snapshot => {
 	const val = snapshot.val();
 	if (val !== null) Object.values(key).filter(value => {
 		console.log(value);
-		return String(value.title).match(new RegExp(keyword));
+		return String(value.title).includes(keyword);
 	}).forEach(createListItem, val);
 	MsDGo7Eg.style.display = "none";
 	m7eOG5wP.style.animation = "none";
