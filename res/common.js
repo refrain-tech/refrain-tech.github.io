@@ -7,7 +7,7 @@ function createListItem(key) {
 	c6JO6k62.innerHTML += `<article class = "W1JhWxuv">
 		<a class = "TVOxHpZ9" href = "/article/?category=${category}&key=${key}">
 			<h1 class = "eFcynxxU">${title}</h1>
-			<img class = "WaWu7Va9" src = ${image} />
+			${image !== "" ? `<img class = "WaWu7Va9" src = ${image} />` : ""}
 		</a>
 	</article>`;
 }
