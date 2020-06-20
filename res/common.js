@@ -3,7 +3,7 @@ Element.prototype.prependChild = function(element) {
 	this.insertBefore(element, this.firstChild);
 };
 function createListItem(key) {
-	const {category = "other", image = "", title = ""} = this[key];
+	const {category = "other", image = "/res/favicon.png", title = ""} = this[key];
 	c6JO6k62.innerHTML += `<article class = "W1JhWxuv">
 		<a class = "TVOxHpZ9" href = "/article/?category=${category}&key=${key}">
 			<h1 class = "eFcynxxU">${title}</h1>
@@ -13,10 +13,10 @@ function createListItem(key) {
 }
 function getParameter() {
 	const parameter = {};
-	location.search.slice(1).split("&").forEach(query => {
-		const [key, value = ""] = query.split("=");
-		parameter[key] = value;
-	});
+	location.search.slice(1).split("&")
+		.filter(value => /.+=.+/.test(value))
+		.map(value => value.split("="))
+		.forEach(query => parameter[query[0]] = query[1]);
 	return parameter;
 }
 mWYXHFlu.addEventListener("keydown", event => {
