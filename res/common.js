@@ -12,12 +12,16 @@ function createListItem(key) {
 	</article>`;
 }
 function getParameter() {
-	const parameter = {};
-	location.search.slice(1).split("&")
-		.filter(value => /.+=.+/.test(value))
-		.map(value => value.split("="))
-		.forEach(query => parameter[query[0]] = query[1]);
-	return parameter;
+//	const parameter = {};
+	return location.search.slice(1).split("&")
+		.filter(element => /.+=.+/.test(element))
+		.map(currentValue => currentValue.split("="))
+		.reduce((accumulator, currentValue) => {
+			accumulator[currentValue[0]] = currentValue[1];
+			return accumulator;
+		}, {});
+//		.forEach(currentValue => parameter[currentValue[0]] = currentValue[1]);
+//	return parameter;
 }
 mWYXHFlu.addEventListener("keydown", event => {
 	switch (event.keyCode) {
