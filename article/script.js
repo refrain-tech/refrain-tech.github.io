@@ -1,6 +1,6 @@
 (function() {
 	"use strict";
-	import {categories} from "/res/categories.js";
+	import categories from "/res/categories.js";
 	const {category = "", key = ""} = getParameter();
 	const currentCategory = categories.find(currentValue => currentValue[0] === category);
 	if (currentCategory === undefined) return location.href = "/";
