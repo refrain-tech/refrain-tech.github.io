@@ -5,7 +5,7 @@
 	if (currentCategory === undefined) return location.href = "/";
 	YFoSPTA3.innerHTML += `<li class = "q6kpK1jH"><a class = "TnBfB6P0" href = "/article/?category=${category}">${(currentCategory || ["", "その他"])[1]}</a></li>`;
 	const ref = key === "" ? database.ref("article").orderByChild("category").equalTo(category).limitToLast(4) : database.ref(`article/${key}`);
-	ref.once(snapshot => {
+	ref.once("value", snapshot => {
 		const val = snapshot.val() ?? {};
 		if (key === "") Object.keys(val).forEach(createListItem, val);
 		else {
