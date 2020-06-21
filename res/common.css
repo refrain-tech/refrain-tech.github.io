@@ -3,9 +3,9 @@
 	--dgray: rgb(63, 63, 63);
 	--gray: rgb(127, 127, 127);
 	--lgray: rgb(191, 191, 191);
-	--red: rgb(255, 0, 127);
-	--green: rgb(127, 255, 0);
-	--blue: rgb(0, 127, 255);
+	--red: rgb(255, 63, 127);
+	--green: rgb(127, 255, 63);
+	--blue: rgb(63, 127, 255);
 }
 html {
 	font: 10px serif;
