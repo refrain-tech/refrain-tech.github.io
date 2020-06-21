@@ -1,18 +1,22 @@
 "use strict";
+const categories = require("/res/categories.js");
 const {category = "", key = ""} = getParameter();
-category === "" ? location.href = "/" : (hasKey => {
-	YFoSPTA3.innerHTML += `<li class = "q6kpK1jH"><a class = "TnBfB6P0" href = "/article/?category=${category}">${([["articles", "記事"], ["contents", "コンテンツ"], ["service", "サービス"]].find(element => element[0] === category) || ["", "その他"])[1]}</a></li>`;
-	(hasKey ? database.ref(`article/${key}`) : database.ref("article").orderByChild("category").equalTo(category).limitToLast(4)).once("value", snapshot => {
-		const val = snapshot.val() ?? {};
-		hasKey ? (() => {
-			const {content = "", title = ""} = val;
-			if (content !== "" && title !== "") {
-				document.title = title;
-				YFoSPTA3.innerHTML += `<li class = "q6kpK1jH"><a class = "TnBfB6P0" href = "/article/?category=${category}&key=${key}">${title}</a></li>`;
-				FE9UGRQR.innerHTML = `<section id = "WSeaG6gm">${content}</section>`;
-			}
-		})() : (() => Object.keys(val).forEach(createListItem, val))();
-		MsDGo7Eg.style.display = "none";
-		m7eOG5wP.style.animation = "none";
-	});
-})(key !== "");
+const currentCategory = categories.find(currentValue => currentValue[0] === category);
+if (currentCategory === undefined) return location.href = "/";
+YFoSPTA3.innerHTML += `<li class = "q6kpK1jH"><a class = "TnBfB6P0" href = "/article/?category=${category}">${(currentCategory || ["", "その他"])[1]}</a></li>`;
+const ref = key === "" ? database.ref("article").orderByChild("category").equalTo(category).limitToLast(4) : database.ref(`article/${key}`);
+ref.once(snapshot => {
+	const val = snapshot.val() ?? {};
+	if (key === "") Object.keys(val).forEach(createListItem, val);
+	else {
+		const {content = "", title = ""} = val;
+		if (content === "" || title === "") location.href = "/"
+		else {
+			document.title = title;
+			YFoSPTA3.innerHTML += `<li class = "q6kpK1jH"><a class = "TnBfB6P0" href = "/article/?category=${category}&key=${key}">${title}</a></li>`;
+			FE9UGRQR.innerHTML = `<section id = "WSeaG6gm">${content}</section>`;
+		}
+	}
+	MsDGo7Eg.style.display = "none";
+	m7eOG5wP.style.animation = "none";
+});
