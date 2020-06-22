@@ -3,8 +3,8 @@ Element.prototype.prependChild = function(element) {
 	this.insertBefore(element, this.firstChild);
 };
 function createListItem(key) {
-	const {category = "other", image = "/res/favicon.png", title = ""} = this[key];
-	c6JO6k62.innerHTML += `<section class = "W1JhWxuv"><a class = "TVOxHpZ9" href = "/article/?category=${category}&key=${key}"><h1 class = "eFcynxxU">${title}</h1>${image !== "" ? `<img class = "WaWu7Va9" src = ${image} />` : ""}</a></section>`;
+	const {category = "other", image = "/res/favicon.png", title = "", url = ""} = this[key];
+	c6JO6k62.innerHTML += `<section class = "W1JhWxuv"><a class = "TVOxHpZ9" href = ${url === "" ? "/article/?category=${category}&key=${key}" : url}><h1 class = "eFcynxxU">${title}</h1><img class = "WaWu7Va9" src = ${image} /></a></section>`;
 }
 function getParameter() {
 	return location.search.slice(1).split("&").filter(currentValue => /.+=.+/.test(currentValue)).map(currentValue => currentValue.split("=")).reduce((accumulator, currentValue) => {
