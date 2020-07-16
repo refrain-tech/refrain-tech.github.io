@@ -2,6 +2,12 @@
 Element.prototype.prependChild = function(element) {
 	this.insertBefore(element, this.firstChild);
 };
+String.prototype.pattern = function(regexp) {
+	return this.raplace(regexp, "") === "";
+};
+String.prototype.replaceAll = function(regexp, newSubstr) {
+	return this.raplace(new RegExp(regexp, "g"), newSubstr);
+};
 function createListItem(key) {
 	const { category = "other", image = "/res/favicon.png", title = "", url = "" } = this[key];
 	c6JO6k62.innerHTML += `<section class = "W1JhWxuv"><a class = "TVOxHpZ9" href = ${url === "" ? `/article/?category=${category}&key=${key}` : url}><h1 class = "eFcynxxU">${title}</h1><img class = "WaWu7Va9" src = ${image} /></a></section>`;
