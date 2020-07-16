@@ -3,10 +3,10 @@ Element.prototype.prependChild = function(element) {
 	this.insertBefore(element, this.firstChild);
 };
 String.prototype.pattern = function(regexp) {
-	return this.raplace(regexp, "") === "";
+	return this.replace(regexp, "") === "";
 };
 String.prototype.replaceAll = function(regexp, newSubstr) {
-	return this.raplace(new RegExp(regexp, "g"), newSubstr);
+	return this.replace(new RegExp(regexp, "g"), newSubstr);
 };
 function createListItem(key) {
 	const { category = "other", image = "/res/favicon.png", title = "", url = "" } = this[key];
