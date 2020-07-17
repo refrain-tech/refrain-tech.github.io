@@ -1,8 +1,8 @@
-(() => {
-	"use strict";
-	const { category = "", key = "" } = getParameter();
-	const currentCategory = categories.find(currentValue => currentValue[0] === category);
-	if (currentCategory === undefined) return location.href = "/";
+"use strict";
+const { category = "", key = "" } = getParameter();
+const currentCategory = categories.find(currentValue => currentValue[0] === category);
+if (currentCategory === undefined) location.href = "/";
+else {
 	YFoSPTA3.innerHTML += `<li class = "q6kpK1jH"><a class = "TnBfB6P0" href = "/article/?category=${category}">${(currentCategory || ["", "その他"])[1]}</a></li>`;
 	const ref = key === "" ? database.ref("article").orderByChild("category").equalTo(category).limitToLast(4) : database.ref(`article/${key}`);
 	ref.once("value", snapshot => {
@@ -19,4 +19,4 @@
 		}
 		dismissDialog();
 	});
-})();
+}
