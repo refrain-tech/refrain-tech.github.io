@@ -1,4 +1,4 @@
-(function() {
+(() => {
 	"use strict";
 	const { category = "", key = "" } = getParameter();
 	const currentCategory = categories.find(currentValue => currentValue[0] === category);
@@ -17,7 +17,6 @@
 				FE9UGRQR.innerHTML = `<section id = "WSeaG6gm">${content}</section>`;
 			}
 		}
-		MsDGo7Eg.style.display = "none";
-		m7eOG5wP.style.animation = "none";
+		dismissDialog();
 	});
 })();
