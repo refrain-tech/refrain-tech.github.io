@@ -1,4 +1,4 @@
-(function() {
+(() => {
 	"use strict";
 	const { keyword = "" } = getParameter();
 	let ref = database.ref("article");
@@ -7,7 +7,6 @@
 	ref.once("value", snapshot => {
 		const val = snapshot.val() ?? {};
 		Object.keys(val).filter(key => keyword === "" || String(val[key].title).includes(keyword)).forEach(createListItem, val);
-		MsDGo7Eg.style.display = "none";
-		m7eOG5wP.style.animation = "none";
+		dismissDialog();
 	});
 })();
