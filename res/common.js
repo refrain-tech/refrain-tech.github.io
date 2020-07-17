@@ -8,20 +8,18 @@ String.prototype.pattern = function(regexp) {
 String.prototype.replaceAll = function(regexp, newSubstr) {
 	return this.replace(new RegExp(regexp, "g"), newSubstr);
 };
-function createListItem(key) {
+const createListItem = key => {
 	const { category = "other", image = "/res/favicon.png", title = "", url = "" } = this[key];
 	c6JO6k62.innerHTML += `<section class = "W1JhWxuv"><a class = "TVOxHpZ9" href = ${url === "" ? `/article/?category=${category}&key=${key}` : url}><h1 class = "eFcynxxU">${title}</h1><img class = "WaWu7Va9" src = ${image} /></a></section>`;
-}
-function getParameter() {
-	return location.search.slice(1).split("&").filter(currentValue => /.+=.+/.test(currentValue)).map(currentValue => currentValue.split("=")).reduce((accumulator, currentValue) => {
-		accumulator[currentValue[0]] = currentValue[1];
-		return accumulator;
-	}, {});
-}
-function dismissDialog(event) {
+};
+const getParameter = () => location.search.slice(1).split("&").filter(currentValue => /.+=.+/.test(currentValue)).map(currentValue => currentValue.split("=")).reduce((accumulator, currentValue) => {
+	accumulator[currentValue[0]] = currentValue[1];
+	return accumulator;
+}, {});
+const dismissDialog = () => {
 	MsDGo7Eg.style.display = "none";
 	m7eOG5wP.style.animation = "none";
-}
+};
 mWYXHFlu.addEventListener("keydown", event => {
 	switch (event.keyCode) {
 		case 13:
