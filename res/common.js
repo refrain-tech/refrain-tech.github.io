@@ -18,6 +18,10 @@ function getParameter() {
 		return accumulator;
 	}, {});
 }
+function dismissDialog(event) {
+	MsDGo7Eg.style.display = "none";
+	m7eOG5wP.style.animation = "none";
+}
 mWYXHFlu.addEventListener("keydown", event => {
 	switch (event.keyCode) {
 		case 13:
