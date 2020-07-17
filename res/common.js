@@ -39,9 +39,9 @@ firebase.initializeApp({
 	projectId: "refrain-tech",
 	storageBucket: "refrain-tech.appspot.com"
 });
-const database = firebase.database();
 const categories = [
 	["articles", "記事"],
 	["contents", "コンテンツ"],
 	["services", "サービス"]
 ];
+const database = firebase.database();
