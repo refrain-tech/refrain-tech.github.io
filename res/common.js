@@ -2,6 +2,9 @@
 Element.prototype.prependChild = function(element) {
 	this.insertBefore(element, this.firstChild);
 };
+NodeList.prototype.each = function(callback) {
+	[].forEach.call(this, callback);
+};
 String.prototype.pattern = function(regexp) {
 	return this.replace(regexp, "") === "";
 };
