@@ -128,13 +128,13 @@ body {
 	margin: 0.5rem;
 	text-decoration: none;
 }
-.TVOxHpZ9[href *= "category=article"] {
+.TVOxHpZ9[href *= "category=articles"] {
 	border: solid 0.1rem var(--red);
 }
 .TVOxHpZ9[href *= "category=contents"] {
 	border: solid 0.1rem var(--green);
 }
-.TVOxHpZ9[href *= "category=service"] {
+.TVOxHpZ9[href *= "category=services"] {
 	border: solid 0.1rem var(--blue);
 }
 .TVOxHpZ9[href *= "category=other"] {
