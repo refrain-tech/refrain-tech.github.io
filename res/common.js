@@ -1,26 +1,4 @@
 "use strict";
-HTMLElement.prototype.copy = function() {
-	const range = document.createRange();
-	range.selectNode(this);
-	const selection = getSelection();
-	selection.removeAllRanges();
-	selection.addRange(range);
-	document.execCommand("copy");
-	selection.removeAllRanges();
-};
-HTMLElement.prototype.prependChild = function(element) {
-	this.insertBefore(element, this.firstChild);
-};
-HTMLSelectElement.prototype.getSelection = function() {
-	return this.options[this.selectedIndex];
-};
-String.prototype.pattern = function(regexp) {
-	return this.replace(regexp, "") === "";
-};
-String.prototype.replaceAll = function(regexp, newSubstr) {
-	return this.replace(new RegExp(regexp, "g"), newSubstr);
-};
-window.isNumber = value => typeof value === "number" && isFinite(value);
 function createListItem(key) {
 	const { category = "other", image = "/res/favicon.png", title = "", url = "" } = this[key];
 	c6JO6k62.innerHTML += `<section class = "W1JhWxuv"><a class = "TVOxHpZ9" href = ${url === "" ? `/article/?category=${category}&key=${key}` : url}><h1 class = "eFcynxxU">${title}</h1><img class = "WaWu7Va9" src = ${image} /></a></section>`;
@@ -44,19 +22,8 @@ mWYXHFlu.addEventListener("keydown", event => {
 	}
 });
 SYaLdKxJ.addEventListener("click", event => location.href = `/?keyword=${mWYXHFlu.value}`);
-firebase.initializeApp({
-	apiKey: "AIzaSyC0Q1fvsfu1XevwPMJCrDx7YWBnpIwAxoo",
-	appId: "1:832323625618:web:0ad8ba9f5f494b41b7bc4b",
-	authDomain: "refrain-tech.firebaseapp.com",
-	databaseURL: "https://refrain-tech.firebaseio.com",
-	measurementId: "G-1Q8CEKJEJ6",
-	messagingSenderId: "832323625618",
-	projectId: "refrain-tech",
-	storageBucket: "refrain-tech.appspot.com"
-});
 const categories = [
 	["articles", "記事"],
 	["contents", "コンテンツ"],
 	["services", "サービス"]
 ];
-const database = firebase.database();
