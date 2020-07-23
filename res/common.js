@@ -4,8 +4,7 @@ function createListItem(key) {
 	c6JO6k62.innerHTML += `<section class = "W1JhWxuv"><a class = "TVOxHpZ9" href = ${url === "" ? `/article/?category=${category}&key=${key}` : url}><h1 class = "eFcynxxU">${title}</h1><img class = "WaWu7Va9" src = ${image} /></a></section>`;
 }
 function dismissDialog() {
-	MsDGo7Eg.style.display = "none";
-	m7eOG5wP.style.animation = "none";
+	[MsDGo7Eg.style.display, m7eOG5wP.style.animation] = ["none", "none"];
 }
 function getParameter() {
 	return location.search.slice(1).split("&").filter(currentValue => /.+=.+/.test(currentValue)).map(currentValue => currentValue.split("=")).reduce((accumulator, currentValue) => {
