@@ -148,6 +148,7 @@ body {
 	overflow: hidden;
 	text-align: center;
 	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 .WaWu7Va9 {
 	display: block;
