@@ -1,9 +1,18 @@
 "use strict";
-Element.prototype.prependChild = function(element) {
+HTMLElement.prototype.copy = function() {
+	const range = document.createRange();
+	range.selectNode(this);
+	const selection = getSelection();
+	selection.removeAllRanges();
+	selection.addRange(range);
+	document.execCommand("copy");
+	selection.removeAllRanges();
+};
+HTMLElement.prototype.prependChild = function(element) {
 	this.insertBefore(element, this.firstChild);
 };
-NodeList.prototype.each = function(callback) {
-	[].forEach.call(this, callback);
+HTMLSelectElement.prototype.getSelection = function() {
+	return this.options[this.selectedIndex];
 };
 String.prototype.pattern = function(regexp) {
 	return this.replace(regexp, "") === "";
