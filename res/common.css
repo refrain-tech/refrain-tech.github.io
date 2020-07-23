@@ -184,20 +184,23 @@ body {
 .B8bMFMni:not(:first-child) {
 	margin-top: 0.5rem;
 }
-.B8bMFMni:not(:first-child):hover {
-	color: black;
-	background: var(--lightgray);
-}
 .bjIdUiG9 {
+	color: white;
 	display: block;
 	text-decoration: none;
+}
+.bjIdUiG9::before, .bjIdUiG9::after {
+	content: "";
+	display: inline-block;
+	width: 1rem;
+}
+.bjIdUiG9:hover {
+	color: black;
+	background: var(--lightgray);
 }
 .O9t87lx5 {
 	height: 1rem;
 	margin-right: 0.5rem;
-}
-.RXXkMLos {
-	color: white;
 }
 #c3D2IM0s {
 	align-items: center;
