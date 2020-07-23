@@ -1,3 +1,4 @@
+"use strict";
 firebase.initializeApp({
 	apiKey: "AIzaSyC0Q1fvsfu1XevwPMJCrDx7YWBnpIwAxoo",
 	appId: "1:832323625618:web:0ad8ba9f5f494b41b7bc4b",
