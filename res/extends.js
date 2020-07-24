@@ -2,7 +2,7 @@
 HTMLElement.prototype.copy = function() {
 	const range = document.createRange();
 	range.selectNode(this);
-	const selection = getSelection();
+	const selection = window.getSelection();
 	selection.removeAllRanges();
 	selection.addRange(range);
 	document.execCommand("copy");
