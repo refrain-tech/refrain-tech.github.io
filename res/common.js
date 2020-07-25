@@ -24,5 +24,6 @@ SYaLdKxJ.addEventListener("click", event => location.href = `/?keyword=${mWYXHFl
 const categories = [
 	["articles", "記事"],
 	["contents", "コンテンツ"],
-	["services", "サービス"]
+	["services", "サービス"],
+	["other", "その他"]
 ];
