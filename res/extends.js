@@ -1,4 +1,10 @@
 "use strict";
+Array.prototype.shuffle = function() {
+	for (let index = this.length - 1; index > 0; index --) {
+		const random = (Math.random() * index) | 0;
+		[this[index], this[random]] = [this[random], this[index]];
+	}
+};
 HTMLElement.prototype.copy = function() {
 	const range = document.createRange();
 	range.selectNode(this);
@@ -21,3 +27,9 @@ String.prototype.replaceAll = function(regexp, newSubstr) {
 	return this.replace(new RegExp(regexp, "g"), newSubstr);
 };
 window.isNumber = value => typeof value === "number" && isFinite(value);
+XMLHttpRequest.requestSync = function(url) {
+	const request = new XMLHttpRequest();
+	request.open("GET", url, false);
+	request.send(null);
+	return request;
+};
