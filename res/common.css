@@ -129,13 +129,13 @@ body {
 	margin: 0.5rem;
 	text-decoration: none;
 }
-.TVOxHpZ9[href *= "category=articles"] {
+.TVOxHpZ9[category = "articles"] {
 	border: solid 0.1rem var(--red);
 }
-.TVOxHpZ9[href *= "category=contents"] {
+.TVOxHpZ9[category = "contents"] {
 	border: solid 0.1rem var(--green);
 }
-.TVOxHpZ9[href *= "category=services"] {
+.TVOxHpZ9[category = "services"] {
 	border: solid 0.1rem var(--blue);
 }
 .TVOxHpZ9[href *= "category=other"] {
