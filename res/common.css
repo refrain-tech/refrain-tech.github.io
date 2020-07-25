@@ -138,7 +138,7 @@ body {
 .TVOxHpZ9[category = "services"] {
 	border: solid 0.1rem var(--blue);
 }
-.TVOxHpZ9[href *= "category=other"] {
+.TVOxHpZ9[category = "other"] {
 	border: solid 0.1rem var(--gray);
 }
 .eFcynxxU {
