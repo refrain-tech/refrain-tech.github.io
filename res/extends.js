@@ -1,3 +1,10 @@
+/**
+ * @overview JSの標準オブジェクトのプロトタイプを拡張します
+ * @version 1.0
+ * @since 2020/7/28
+ * @author Refrain Tech <refrain.tech@gmail.com>
+ * @copyright (c) Copyright 2020 refrain.tech All Rights Reserved
+ */
 "use strict";
 /**
  * @function Array#shuffle 配列をランダムな順序に入れ換えます
