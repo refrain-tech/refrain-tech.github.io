@@ -80,7 +80,7 @@ HTMLSelectElement.prototype.getSelection = function() { return this.options[this
 NodeList.prototype.filter = function(callback) { return [].filter.call(this, callback) };
 /**
  * @function NodeList#forEach NodeListの全ての要素でcallbackを実行します
- * @argument {function} callback フィルタリングに使用するコールバック関数
+ * @argument {function} callback 実行するコールバック関数
  * @version 1.0
  * @since 2020/7/28
  * @author Refrain Tech <refrain.tech@gmail.com>
