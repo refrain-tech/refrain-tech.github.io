@@ -1,8 +1,28 @@
+/**
+ * @overview Github Pages内で共通で使用する関数・変数を実装します
+ * @version 1.0
+ * @since 2020/7/28
+ * @author Refrain Tech <refrain.tech@gmail.com>
+ * @copyright (c) Copyright 2020 refrain.tech All Rights Reserved
+ */
 "use strict";
+/**
+ * @function createListItem Firebase Database上のデータを使用して記事の一覧に追記する
+ * @argument {string} key Firebase Datebase上のデータのUID
+ * @version 1.0
+ * @since 2020/7/28
+ * @author Refrain Tech <refrain.tech@gmail.com>
+ */
 function createListItem(key) {
 	const { category = "other", image = "/res/favicon.png", title = "", url = "" } = this[key];
 	c6JO6k62.innerHTML += `<section class = "W1JhWxuv"><a category = ${category} class = "TVOxHpZ9" href = ${url === "" ? `/article/?category=${category}&key=${key}` : url} target = "_new"><h1 class = "eFcynxxU">${title}</h1><img class = "WaWu7Va9" src = ${image} /></a></section>`;
 }
+/**
+ * @function dismissDialog 読み込み中に表示されるダイアログを非表示にする
+ * @version 1.0
+ * @since 2020/7/28
+ * @author Refrain Tech <refrain.tech@gmail.com>
+ */
 function dismissDialog() {
 	[MsDGo7Eg.style.display, m7eOG5wP.style.animation] = ["none", "none"];
 }
