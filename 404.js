@@ -1,2 +1,4 @@
-"use strict";
-dismissDialog();
+(function() {
+	"use strict";
+	dismissDialog();
+})();
