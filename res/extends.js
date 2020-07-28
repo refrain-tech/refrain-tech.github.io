@@ -85,6 +85,31 @@ String.prototype.pattern = function(regexp) { return this.replace(regexp, "") ==
  */
 String.prototype.replaceAll = function(regexp, newSubstr) { return this.replace(new RegExp(regexp, "g"), newSubstr) };
 /**
+ * @function Math.average 引数の平均値を取得する
+ * @argument {*} ...values 平均値を求める値
+ * @return {number} 引数の平均値
+ */
+Math.average = (...values) => {
+	values = values.filter(isNumber);
+	return Math.sum(values) / values.length;
+};
+/**
+ * @function Math.median 引数の中央値を取得する
+ * @argument {*} ...values 中央値を求める値
+ * @return {number} 引数の中央値
+ */
+Mat.median = (...values) => {
+	values = values.filter(isNumber);
+	const index = Math.floor(values.length / 2);
+	return values.length % 2 ? values[index] : (values[index - 1] + values[index]) / 2;
+};
+/**
+ * @function Math.sum 引数の合計値を取得する
+ * @argument {*} ...values 合計値を求める値
+ * @return {number} 引数の合計値
+ */
+Mat.sum = (...values) => values.filter(isNumber).reduce((accumulator, currentValue) => accumulator + currentValue);
+/**
  * @function window.isNumber 値が数値であるかを判定する
  * @argument {*} value 数値か判定する値
  * @return {boolean} 値が数値か否かの真偽値
