@@ -9,9 +9,6 @@
 /**
  * @function createListItem Firebase Database上のデータを使用して記事の一覧に追記する
  * @argument {string} key Firebase Datebase上のデータのUID
- * @version 1.0
- * @since 2020/7/28
- * @author Refrain Tech <refrain.tech@gmail.com>
  */
 function createListItem(key) {
 	const { category = "other", image = "/res/favicon.png", title = "", url = "" } = this[key];
@@ -19,9 +16,6 @@ function createListItem(key) {
 }
 /**
  * @function dismissDialog 読み込み中に表示されるダイアログを非表示にする
- * @version 1.0
- * @since 2020/7/28
- * @author Refrain Tech <refrain.tech@gmail.com>
  */
 function dismissDialog() {
 	[MsDGo7Eg.style.display, m7eOG5wP.style.animation] = ["none", "none"];
@@ -29,9 +23,6 @@ function dismissDialog() {
 /**
  * @function getParameter URLのパラメータをオブジェクトに変換する
  * @return {object<string, string>} パラメータをKey: Valueのペアに変換したオブジェクト
- * @version 1.0
- * @since 2020/7/28
- * @author Refrain Tech <refrain.tech@gmail.com>
  */
 function getParameter() {
 	return location.search.slice(1).split("&").filter(currentValue => /.+=.+/.test(currentValue)).map(currentValue => currentValue.split("=")).reduce((accumulator, currentValue) => {
@@ -48,6 +39,9 @@ mWYXHFlu.addEventListener("keydown", event => {
 	}
 });
 SYaLdKxJ.addEventListener("click", event => location.href = `/?keyword=${mWYXHFlu.value}`);
+/**
+ * @constant {array<array<string>>} categories Github Pagesで表示する記事のカテゴリー
+ */
 const categories = [
 	["article", "記事"],
 	["content", "コンテンツ"],
