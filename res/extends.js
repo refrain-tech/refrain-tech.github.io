@@ -98,7 +98,7 @@ Math.average = (...values) => {
  * @argument {*} ...values 中央値を求める値
  * @return {number} 引数の中央値
  */
-Mat.median = (...values) => {
+Math.median = (...values) => {
 	values = values.filter(isNumber);
 	const index = Math.floor(values.length / 2);
 	return values.length % 2 ? values[index] : (values[index - 1] + values[index]) / 2;
@@ -108,7 +108,7 @@ Mat.median = (...values) => {
  * @argument {*} ...values 合計値を求める値
  * @return {number} 引数の合計値
  */
-Mat.sum = (...values) => values.filter(isNumber).reduce((accumulator, currentValue) => accumulator + currentValue);
+Math.sum = (...values) => values.filter(isNumber).reduce((accumulator, currentValue) => accumulator + currentValue);
 /**
  * @function window.isNumber 値が数値であるかを判定する
  * @argument {*} value 数値か判定する値
