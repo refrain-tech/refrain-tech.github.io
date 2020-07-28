@@ -7,7 +7,7 @@
  */
 "use strict";
 /**
- * @function Array#shuffle 配列をランダムな順序に入れ換えます
+ * @function Array#shuffle 配列をランダムな順序に入れ換える
  * @return {array<*>} 順序の入れ換えられた配列
  * @version 1.0
  * @since 2020/7/28
@@ -20,7 +20,7 @@ Array.prototype.shuffle = function() {
 	}
 };
 /**
- * @function HTMLCollection#filter HTMLCollectionにフィルタリングを実行します
+ * @function HTMLCollection#filter HTMLCollectionにフィルタリングを実行する
  * @argument {function} callback フィルタリングに使用するコールバック関数
  * @return {array<HTMLElement>} フィルタリング後の配列
  * @version 1.0
@@ -29,7 +29,7 @@ Array.prototype.shuffle = function() {
  */
 HTMLCollection.prototype.filter = function(callback) { return [].filter.call(this, callback) };
 /**
- * @function HTMLCollection#forEach HTMLCollectionの全ての要素でcallbackを実行します
+ * @function HTMLCollection#forEach HTMLCollectionの全ての要素でcallbackを実行する
  * @argument {function} callback 実行するコールバック関数
  * @version 1.0
  * @since 2020/7/28
@@ -37,7 +37,7 @@ HTMLCollection.prototype.filter = function(callback) { return [].filter.call(thi
  */
 HTMLCollection.prototype.forEach = function(callback) { [].forEach.call(this, callback) };
 /**
- * @function HTMLCollection#map HTMLCollectionにマッピング実行します
+ * @function HTMLCollection#map HTMLCollectionにマッピング実行する
  * @argument {function} callback マッピングに使用するコールバック関数
  * @return {array<*>} マッピング後の配列
  * @version 1.0
@@ -46,7 +46,7 @@ HTMLCollection.prototype.forEach = function(callback) { [].forEach.call(this, ca
  */
 HTMLCollection.prototype.map = function(callback) { return [].map.call(this, callback) };
 /**
- * @function HTMLElement#copy HTML要素をクリップボードにコピーします
+ * @function HTMLElement#copy HTML要素をクリップボードにコピーする
  * @version 1.0
  * @since 2020/7/28
  * @author Refrain Tech <refrain.tech@gmail.com>
@@ -61,7 +61,7 @@ HTMLElement.prototype.copy = function() {
 	selection.removeAllRanges();
 };
 /**
- * @function HTMLElement#prependChild HTML要素を指定された要素の前に追加します
+ * @function HTMLElement#prependChild HTML要素を指定された要素の前に追加する
  * @argument {HTMLElement} element 直前に追加される要素
  * @version 1.0
  * @since 2020/7/28
@@ -69,7 +69,7 @@ HTMLElement.prototype.copy = function() {
  */
 HTMLElement.prototype.prependChild = function(element) { this.insertBefore(element, this.firstChild) };
 /**
- * @function HTMLSelectElement#getSelection select要素で選択されているoption要素を取得します
+ * @function HTMLSelectElement#getSelection select要素で選択されているoption要素を取得する
  * @return {HTMLOptionElement} 取得されたoption要素
  * @version 1.0
  * @since 2020/7/28
@@ -77,7 +77,7 @@ HTMLElement.prototype.prependChild = function(element) { this.insertBefore(eleme
  */
 HTMLSelectElement.prototype.getSelection = function() { return this.options[this.selectedIndex] };
 /**
- * @function NodeList#filter NodeListにフィルタリングを実行します
+ * @function NodeList#filter NodeListにフィルタリングを実行する
  * @argument {function} callback フィルタリングに使用するコールバック関数
  * @return {array<HTMLElement>} フィルタリング後の配列
  * @version 1.0
@@ -86,7 +86,7 @@ HTMLSelectElement.prototype.getSelection = function() { return this.options[this
  */
 NodeList.prototype.filter = function(callback) { return [].filter.call(this, callback) };
 /**
- * @function NodeList#forEach NodeListの全ての要素でcallbackを実行します
+ * @function NodeList#forEach NodeListの全ての要素でcallbackを実行する
  * @argument {function} callback 実行するコールバック関数
  * @version 1.0
  * @since 2020/7/28
@@ -94,7 +94,7 @@ NodeList.prototype.filter = function(callback) { return [].filter.call(this, cal
  */
 NodeList.prototype.forEach = function(callback) { [].forEach.call(this, callback) };
 /**
- * @function NodeList#map NodeListにマッピング実行します
+ * @function NodeList#map NodeListにマッピングを実行する
  * @argument {function} callback マッピングに使用するコールバック関数
  * @return {array<*>} マッピング後の配列
  * @version 1.0
@@ -103,7 +103,7 @@ NodeList.prototype.forEach = function(callback) { [].forEach.call(this, callback
  */
 NodeList.prototype.map = function(callback) { return [].map.call(this, callback) };
 /**
- * @function String#pattern 文字列が指定された文字列、正規表現と合致するかを判定します
+ * @function String#pattern 文字列が指定された文字列、正規表現と合致するか判定する
  * @argument {string|regexp} regexp 検索に使用する文字列、正規表現
  * @return {boolean} 指定された文字列、正規表現と合致するかの真偽値
  * @version 1.0
@@ -112,7 +112,7 @@ NodeList.prototype.map = function(callback) { return [].map.call(this, callback)
  */
 String.prototype.pattern = function(regexp) { return this.replace(regexp, "") === "" };
 /**
- * @function String#replaceAll 文字列から指定された文字列、正規表現に当てはまる箇所を全て削除します
+ * @function String#replaceAll 文字列から指定された文字列、正規表現に合致する箇所を全て削除する
  * @argument {string|regexp} regexp 検索に使用する文字列、正規表現
  * @return {string} 指定された文字列、正規表現が削除された文字列
  * @version 1.0
@@ -121,7 +121,7 @@ String.prototype.pattern = function(regexp) { return this.replace(regexp, "") ==
  */
 String.prototype.replaceAll = function(regexp, newSubstr) { return this.replace(new RegExp(regexp, "g"), newSubstr) };
 /**
- * @function window.isNumber 値が数値であるかを判定します
+ * @function window.isNumber 値が数値であるかを判定する
  * @argument {*} value 数値か判定する値
  * @return {boolean} 値が数値か否かの真偽値
  * @version 1.0
@@ -130,7 +130,7 @@ String.prototype.replaceAll = function(regexp, newSubstr) { return this.replace(
  */
 window.isNumber = value => typeof value === "number" && isFinite(value);
 /**
- * @function XMLHttpRequest.requestSync XHRを同期処理で実行します
+ * @function XMLHttpRequest.requestSync XHRを同期処理で実行する
  * @argument {string} url リクエスト先のURL
  * @argument {object} [option = {}] リクエストに使用する値
  * @return {promise} リクエストを実行するPromiseオブジェクト
