@@ -91,7 +91,7 @@ String.prototype.replaceAll = function(regexp, newSubstr) { return this.replace(
  */
 Math.average = (...values) => {
 	values = values.filter(isNumber);
-	return Math.sum(values) / values.length;
+	return Math.sum.apply(null, values) / values.length;
 };
 /**
  * @function Math.median 引数の中央値を取得する
