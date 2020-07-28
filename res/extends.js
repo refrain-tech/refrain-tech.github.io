@@ -1,5 +1,5 @@
 /**
- * @overview JSの標準オブジェクトのプロトタイプを拡張します
+ * @overview JSの標準オブジェクトのプロトタイプを拡張する
  * @version 1.0
  * @since 2020/7/28
  * @author Refrain Tech <refrain.tech@gmail.com>
