@@ -1,5 +1,5 @@
 /**
- * @overview Github Pages内で共通で使用する関数・変数を実装します
+ * @overview Github Pages内で共通で使用する関数・変数を実装する
  * @version 1.0
  * @since 2020/7/28
  * @author Refrain Tech <refrain.tech@gmail.com>
@@ -26,6 +26,13 @@ function createListItem(key) {
 function dismissDialog() {
 	[MsDGo7Eg.style.display, m7eOG5wP.style.animation] = ["none", "none"];
 }
+/**
+ * @function getParameter URLのパラメータをオブジェクトに変換する
+ * @return {object<string, string>} パラメータをKey: Valueのペアに変換したオブジェクト
+ * @version 1.0
+ * @since 2020/7/28
+ * @author Refrain Tech <refrain.tech@gmail.com>
+ */
 function getParameter() {
 	return location.search.slice(1).split("&").filter(currentValue => /.+=.+/.test(currentValue)).map(currentValue => currentValue.split("=")).reduce((accumulator, currentValue) => {
 		accumulator[currentValue[0]] = currentValue[1];
