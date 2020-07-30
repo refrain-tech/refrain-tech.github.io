@@ -1,7 +1,7 @@
 /**
- * @overview JSの標準オブジェクトのプロトタイプを拡張する
- * @version 1.0
+ * @overview extends.js JSの標準オブジェクトのプロトタイプを拡張する
  * @since 2020/7/28
+ * @version 1.0
  * @author Refrain Tech <refrain.tech@gmail.com>
  * @copyright (c) Copyright 2020 refrain.tech All Rights Reserved
  */
@@ -33,9 +33,7 @@ HTMLCollection.prototype.forEach = function(callback) { [].forEach.call(this, ca
  * @return {array<*>} マッピング後の配列
  */
 HTMLCollection.prototype.map = function(callback) { return [].map.call(this, callback) };
-/**
- * @function HTMLElement#copy HTML要素をクリップボードにコピーする
- */
+/** @function HTMLElement#copy HTML要素をクリップボードにコピーする */
 HTMLElement.prototype.copy = function() {
 	const range = document.createRange();
 	range.selectNode(this);
@@ -128,8 +126,11 @@ XMLHttpRequest.requestSync = (url, option = {}) => {
 		request.responseType = responseType;
 		request.timeout = timeout;
 		request.open("GET", url);
+		/** @event request#error */
 		request.addEventListener("error", event => reject(this));
+		/** @event request#load */
 		request.addEventListener("load", event => resolve(this));
+		/** @event request#timeout */
 		request.addEventListener("timeout", event => reject(this));
 		request.send();
 	});
