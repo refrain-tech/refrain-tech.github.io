@@ -79,10 +79,10 @@ String.prototype.pattern = function(regexp) { return this.replace(regexp, "") ==
  */
 String.prototype.replaceAll = function(regexp, newSubstr) { return this.replace(new RegExp(regexp, "g"), newSubstr) };
 /**
- * @method document.getParameter URLのパラメータをオブジェクトに変換する
+ * @method document.getQueryParameters URLのパラメータをオブジェクトに変換する
  * @return { Object<String, String> } パラメータをKey: Valueのペアに変換したオブジェクト
  */
-document.getParameter = () => location.search.slice(1).split("&").filter(currentValue => /.+=.+/.test(currentValue)).map(currentValue => currentValue.split("=")).reduce((accumulator, currentValue) => {
+document.getQueryParameters = () => location.search.slice(1).split("&").filter(currentValue => /.+=.+/.test(currentValue)).map(currentValue => currentValue.split("=")).reduce((accumulator, currentValue) => {
 	accumulator[currentValue[0]] = currentValue[1];
 	return accumulator;
 }, {});
