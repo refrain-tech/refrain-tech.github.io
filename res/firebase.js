@@ -1,10 +1,3 @@
-/**
- * @overview firebase.js Firebaseの初期化処理と変数を実装する
- * @since 2020/7/28
- * @version 1.0
- * @author Refrain Tech <refrain.tech@gmail.com>
- * @copyright (c) Copyright 2020 refrain.tech All Rights Reserved
- */
 "use strict";
 firebase.initializeApp({
 	apiKey: "AIzaSyC0Q1fvsfu1XevwPMJCrDx7YWBnpIwAxoo",
@@ -16,5 +9,4 @@ firebase.initializeApp({
 	projectId: "refrain-tech",
 	storageBucket: "refrain-tech.appspot.com"
 });
-/** @constant {object} database Firebase Databaseへアクセスするための変数 */
 const database = firebase.database();
