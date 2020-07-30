@@ -1,7 +1,7 @@
 /**
- * @overview Github Pages内で共通で使用する関数・変数を実装する
- * @version 1.0
+ * @overview firebase.js Firebaseの初期化処理と変数を実装する
  * @since 2020/7/28
+ * @version 1.0
  * @author Refrain Tech <refrain.tech@gmail.com>
  * @copyright (c) Copyright 2020 refrain.tech All Rights Reserved
  */
@@ -16,7 +16,5 @@ firebase.initializeApp({
 	projectId: "refrain-tech",
 	storageBucket: "refrain-tech.appspot.com"
 });
-/**
- * @constant {object} database Firebase Databaseへアクセスするための変数
- */
+/** @constant {object} database Firebase Databaseへアクセスするための変数 */
 const database = firebase.database();
