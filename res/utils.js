@@ -67,11 +67,11 @@ NodeList.prototype.forEach = function(callback) { [].forEach.call(this, callback
  */
 NodeList.prototype.map = function(callback) { return [].map.call(this, callback) };
 /**
- * @method String#pattern 文字列が指定された文字列、正規表現と合致するか判定する
+ * @method String#test 文字列が指定された文字列、正規表現と合致するか判定する
  * @argument { String | RegExp } regexp 検索に使用する文字列、正規表現
  * @return { Boolean } 指定された文字列、正規表現と合致するかの真偽値
  */
-String.prototype.pattern = function(regexp) { return this.replace(regexp, "") === "" };
+String.prototype.test = function(regexp) { return this.replace(regexp, "") === "" };
 /**
  * @method String#replaceAll 文字列から指定された文字列、正規表現に合致する箇所を全て削除する
  * @argument { String | RegExp } regexp 検索に使用する文字列、正規表現
