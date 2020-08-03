@@ -4,8 +4,9 @@
  * @return { Array<*> } 順序の入れ換えられた配列
  */
 Array.prototype.shuffle = function() {
-	for (let index = this.length - 1; index > 0; index --) {
-		const random = (Math.random() * index) | 0;
+	let index = this.length - 1;
+	while (index > 0) {
+		const random = (Math.random() * index --) | 0;
 		[this[index], this[random]] = [this[random], this[index]];
 	}
 	return this;
