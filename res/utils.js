@@ -1,7 +1,7 @@
 "use strict";
 /**
  * @method Array#shuffle 配列をランダムな順序に入れ換える
- * @return { Array<*> } 順序の入れ換えられた配列
+ * @return { Array } 順序の入れ換えられた配列
  */
 Array.prototype.shuffle = function() {
 	let index = this.length;
@@ -11,23 +11,6 @@ Array.prototype.shuffle = function() {
 	}
 	return this;
 };
-/**
- * @method HTMLCollection#filter HTMLCollectionにフィルタリングを実行する
- * @argument { Function } callback フィルタリングに使用するコールバック関数
- * @return { Array<HTMLElement> } フィルタリング後の配列
- */
-HTMLCollection.prototype.filter = function(callback) { return [].filter.call(this, callback) };
-/**
- * @method HTMLCollection#forEach HTMLCollectionの全ての要素でcallbackを実行する
- * @argument { Function } callback 実行するコールバック関数
- */
-HTMLCollection.prototype.forEach = function(callback) { [].forEach.call(this, callback) };
-/**
- * @method HTMLCollection#map HTMLCollectionにマッピング実行する
- * @argument { Function } callback マッピングに使用するコールバック関数
- * @return { Array<*> } マッピング後の配列
- */
-HTMLCollection.prototype.map = function(callback) { return [].map.call(this, callback) };
 /**
  * @method HTMLElement#copy HTML要素をクリップボードにコピーする
  */
@@ -51,37 +34,15 @@ HTMLElement.prototype.prependChild = function(element) { this.insertBefore(eleme
  */
 HTMLSelectElement.prototype.getSelection = function() { return this.options[this.selectedIndex] };
 /**
- * @method NodeList#filter NodeListにフィルタリングを実行する
- * @argument { Function } callback フィルタリングに使用するコールバック関数
- * @return { Array<HTMLElement> } フィルタリング後の配列
- */
-NodeList.prototype.filter = function(callback) { return [].filter.call(this, callback) };
-/**
- * @method NodeList#forEach NodeListの全ての要素でcallbackを実行する
- * @argument { Function } callback 実行するコールバック関数
- */
-NodeList.prototype.forEach = function(callback) { [].forEach.call(this, callback) };
-/**
- * @method NodeList#map NodeListにマッピングを実行する
- * @argument { Function } callback マッピングに使用するコールバック関数
- * @return { Array<*> } マッピング後の配列
- */
-NodeList.prototype.map = function(callback) { return [].map.call(this, callback) };
-/**
- * @method String#test 文字列が指定された文字列、正規表現と合致するか判定する
+ * @method String#replaceAll 文字列から指定された文字列、正規表現に合致する箇所を全て置き換える
  * @argument { String | RegExp } regexp 検索に使用する文字列、正規表現
- * @return { Boolean } 指定された文字列、正規表現と合致するかの真偽値
- */
-String.prototype.test = function(regexp) { return this.replace(regexp, "") === "" };
-/**
- * @method String#replaceAll 文字列から指定された文字列、正規表現に合致する箇所を全て削除する
- * @argument { String | RegExp } regexp 検索に使用する文字列、正規表現
- * @return { String } 指定された文字列、正規表現が削除された文字列
+ * @argument { String } newSubstr 置き換え後の文字列
+ * @return { String } 指定された文字列、正規表現が置き換えられた文字列
  */
 String.prototype.replaceAll = function(regexp, newSubstr) { return this.replace(new RegExp(regexp, "g"), newSubstr) };
 /**
  * @method document.getQueryParameters URLのパラメータをオブジェクトに変換する
- * @return { Object<String, String> } パラメータをKey: Valueのペアに変換したオブジェクト
+ * @return { Object } パラメータをKey: Valueのペアに変換したオブジェクト
  */
 document.getQueryParameters = () => location.search.slice(1).split("&").filter(currentValue => /.+=.+/.test(currentValue)).map(currentValue => currentValue.split("=")).reduce((accumulator, currentValue) => {
 	accumulator[currentValue[0]] = currentValue[1];
@@ -121,9 +82,9 @@ window.isNumber = value => typeof value === "number" && isFinite(value);
 /**
  * @method XMLHttpRequest.requestSync XHRを同期処理で実行する
  * @argument { String } url リクエスト先のURL
- * @argument { Object<*, *> } [option = {}] リクエストに使用するオプション
- *   @property { String } responseType = "" レスポンス型
- *   @property { Number } timeout = 0 タイムアウトまでの時間
+ * @argument { Object } [option = {}] リクエストに使用するオプション
+ *   @property { String } [responseType = ""] レスポンス型
+ *   @property { Number } [timeout = 0] タイムアウトまでの時間
  * @return { Promise } リクエストを実行するPromiseオブジェクト
  */
 XMLHttpRequest.requestSync = (url, option = {}) => {
