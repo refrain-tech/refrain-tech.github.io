@@ -153,6 +153,7 @@ td {
 /** Main Page & Search Page */
 #c6JO6k62 {
 	display: flex;
+	flex-wrap: wrap;
 	margin: 0.5rem;
 }
 /** Article Page & 404 Page */
