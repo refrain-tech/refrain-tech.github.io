@@ -1,5 +1,12 @@
 "use strict";
 /**
+ * @method Array#random 配列からランダムな値を取得する
+ * @return { * } 得られた値
+ */
+Array.prototype.random = function() {
+	return this[(Math.random() * this.length) | 0];
+};
+/**
  * @method Array#shuffle 配列をランダムな順序に入れ換える
  * @return { Array } 順序の入れ換えられた配列
  */
