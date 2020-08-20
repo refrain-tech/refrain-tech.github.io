@@ -1,4 +1,2 @@
-(() => {
-	"use strict";
-	dismissDialog();
-})();
+"use strict";
+dismissDialog();
