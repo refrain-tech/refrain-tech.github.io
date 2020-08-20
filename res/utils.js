@@ -6,7 +6,7 @@ Array.prototype.shuffle = function() {
 	let index = this.length;
 	while (index > 0) {
 		const random = (Math.random() * index --) | 0;
-		[this[index], this[random]] = [this[random], this[index]];
+		[ this[index], this[random] ] = [ this[random], this[index] ];
 	}
 	return this;
 };
