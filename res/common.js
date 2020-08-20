@@ -16,9 +16,9 @@ mWYXHFlu.addEventListener("keydown", event => {
 	}
 });
 SYaLdKxJ.addEventListener("click", event => location.href = `/?keyword=${mWYXHFlu.value}`);
-const categories = [
-	[ "article", "記事" ],
-	[ "content", "コンテンツ" ],
-	[ "service", "サービス" ],
-	[ "other", "その他" ]
-];
+const categories = {
+	article: "記事",
+	content: "コンテンツ",
+	service: "サービス",
+	other: "その他"
+};
