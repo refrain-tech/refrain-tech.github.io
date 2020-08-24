@@ -6,7 +6,7 @@ Array.prototype.shuffle = function() {
 	let index = this.length;
 	while (index > 0) {
 		const random = (Math.random() * index --) | 0;
-		[ this[index], this[random] ] = [ this[random], this[index] ];
+		[this[index], this[random]] = [this[random], this[index]];
 	}
 	return this;
 };
@@ -43,18 +43,3 @@ Math.median = (...values) => {
 };
 Math.sum = (...values) => values.filter(isNumber).reduce((accumulator, currentValue) => accumulator + currentValue);
 window.isNumber = value => typeof value === "number" && isFinite(value);
-/*
-XMLHttpRequest.requestSync = (url, option = {}) => {
-	return new Promise((resolve, reject) => {
-		const request = new XMLHttpRequest();
-		const { responseType = "", timeout = 0 } = option;
-		request.responseType = responseType;
-		request.timeout = timeout;
-		request.open("GET", url);
-		request.addEventListener("error", event => reject(this));
-		request.addEventListener("load", event => resolve(this));
-		request.addEventListener("timeout", event => reject(this));
-		request.send();
-	});
-};
-*/
