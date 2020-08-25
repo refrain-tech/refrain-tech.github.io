@@ -1,0 +1,152 @@
+@charset "utf-8";
+:root {
+	--lightred: rgb(255, 63, 63);
+	--red: rgb(191, 63, 63);
+	--darkred: rgb(127, 63, 63);
+	
+	--lightgreen: rgb(63, 255, 63);
+	--green: rgb(63, 191, 63);
+	--darkgreen: rgb(63, 127, 63);
+	
+	--lightblue: rgb(63, 63, 255);
+	--blue: rgb(63, 63, 191);
+	--darkblue: rgb(63, 63, 127);
+	
+	--lightmagenta: rgb(255, 63, 255);
+	--magenta: rgb(191, 63, 191);
+	--darkmagenta: rgb(127, 63, 127);
+	
+	--lightyellow: rgb(255, 255, 63);
+	--yellow: rgb(191, 191, 63);
+	--darkyellow: rgb(127, 127, 63);
+	
+	--lightcyan: rgb(63, 255, 255);
+	--cyan: rgb(63, 191, 191);
+	--darkcyan: rgb(63, 127, 127);
+	
+	--lightgray: rgb(191, 191, 191);
+	--gray: rgb(127, 127, 127);
+	--darkgray: rgb(63, 63, 63);
+}
+a {
+	color: var(--lightblue);
+	text-decoration: none;
+}
+a:visited {
+	color: var(--darkmagenta);
+}
+blockquote {
+	border-left: solid 0.5rem var(--gray);
+	margin: 1rem 0;
+	padding: 0.5rem 0 0.5rem 1rem;
+}
+code {
+	background: var(--lightgray);
+	font-style: monospace;
+}
+dd {
+	margin: 0;
+	padding: 0;
+	padding-left: 2rem;
+}
+dl {
+	margin: 1rem 0;
+	padding: 0;
+}
+dt {
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	box-shadow: 0.5rem 0.5rem 0.5rem var(--gray);
+	margin: 1rem 0;
+	padding: 0.5rem;
+	padding-right: 0;
+}
+h1 {
+	border-left: solid 0.5rem var(--darkred);
+	font-size: 2rem;
+}
+h2 {
+	border-left: solid 0.5rem var(--darkgreen);
+	font-size: 1.8rem;
+}
+h3 {
+	border-left: solid 0.5rem var(--darkblue);
+	font-size: 1.6rem;
+}
+h4 {
+	border-left: solid 0.5rem var(--darkmagenta);
+	font-size: 1.4rem;
+}
+h5 {
+	border-left: solid 0.5rem var(--darkyellow);
+	font-size: 1.2rem;
+}
+h6 {
+	border-left: solid 0.5rem var(--darkcyan);
+	font-size: 1rem;
+}
+hr {
+	border: 0;
+	border-top: solid 1px var(--darkgray);
+	margin: 1rem 0;
+	padding: 0;
+}
+img {
+	display: block;
+	margin: 1rem 0;
+	padding: 0;
+	width: 100%;
+}
+ol, ul {
+	margin: 1rem 0;
+	padding: 0;
+	padding-left: 2rem;
+}
+ol ol, ul ul {
+	margin: 0;
+}
+p {
+	margin: 1rem 0;
+	padding: 0;
+}
+pre code {
+	background: var(--gray);
+	border-radius: 1rem;
+	color: white;
+	display: block;
+	margin: 1rem 0;
+	padding: 1rem;
+	ward-wrap: nowrap;
+}
+section {
+	margin: 1rem 0;
+	padding: 0;
+	padding-left: 1rem;
+}
+table {
+	border-spacing: 0;
+	margin: 1rem 0;
+	padding: 0;
+	max-width: 100%;
+}
+th {
+	border: 0;
+	border-bottom: solid 1px var(--darkgray);
+	margin: 0;
+	padding: 0.5rem 1rem;
+}
+td {
+	border: 0;
+	border-bottom: solid 1px var(--lightgray);
+	margin: 0;
+	padding: 0.5rem 1rem;
+}
+tr {
+	margin: 0;
+	padding: 0;
+}
+td:first-child {
+	white-space: nowrap;
+}
