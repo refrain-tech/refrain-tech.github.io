@@ -188,8 +188,9 @@ body {
 	margin-top: 0.5rem;
 }
 .bjIdUiG9 {
+	align-items: center;
 	color: white;
-	display: block;
+	display: flex;
 	text-decoration: none;
 }
 .bjIdUiG9::before, .bjIdUiG9::after {
