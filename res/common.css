@@ -213,12 +213,8 @@ body {
 	align-items: center;
 	color: white;
 	display: flex;
+	padding: 0 1rem;
 	text-decoration: none;
-}
-.bjIdUiG9::before, .bjIdUiG9::after {
-	content: "";
-	display: inline-block;
-	width: 1rem;
 }
 .bjIdUiG9:hover {
 	color: black;
