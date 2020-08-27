@@ -40,7 +40,9 @@ Math.average = (...values) => {
 Math.median = (...values) => {
   values = values.filter(isNumber);
   const index = Math.floor(values.length / 2);
-  return values.length % 2 ? values[index] : (values[index - 1] + values[index]) / 2;
+  return values.length % 2
+    ? values[index]
+    : (values[index - 1] + values[index]) / 2;
 };
 Math.sum = (...values) => values.filter(isNumber).reduce((accumulator, currentValue) => accumulator + currentValue);
 window.isNumber = value => typeof value === 'number' && isFinite(value);
