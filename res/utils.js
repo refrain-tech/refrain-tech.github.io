@@ -10,6 +10,9 @@ Array.prototype.shuffle = function () {
   }
   return this;
 };
+Date.prototype.isWeekend = function () {
+  return this.getDay() % 6 === 0;
+};
 HTMLElement.prototype.copy = function () {
   const range = document.createRange();
   range.selectNode(this);
