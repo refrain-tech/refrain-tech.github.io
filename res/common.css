@@ -144,8 +144,20 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.RaWchbnJ {
+  position: relative;
+}
+.RaWchbnJ::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
 .WaWu7Va9 {
   display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
 }
 /** Footer */
