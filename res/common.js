@@ -1,7 +1,7 @@
 'use strict';
 function createListItem (key) {
   const { category = 'other', image = '/res/favicon.png', title = '', url = '' } = this[key];
-  c6JO6k62.innerHTML += `<section class = 'W1JhWxuv'><a category = ${category} class = 'TVOxHpZ9' href = ${url === '' ? `/article/?category=${category}&key=${key}` : url} target = '_new'><h1 class = 'eFcynxxU'>${title}</h1><div class = 'RaWchbnJ'><img class = 'WaWu7Va9' src = ${image} /></div></a></section>`;
+  c6JO6k62.innerHTML += `<section class = 'W1JhWxuv'><a category = ${category} class = 'TVOxHpZ9' href = ${url === '' ? `/article/?category=${category}&key=${key}` : url} target = '_new'><span class = 'eFcynxxU'>${title}</span><div class = 'RaWchbnJ'><img class = 'WaWu7Va9' src = ${image} /></div></a></section>`;
 }
 function dismissDialog () {
   MsDGo7Eg.style.display = 'none';
