@@ -136,7 +136,7 @@ body {
   border: solid 0.1rem var(--gray);
 }
 .eFcynxxU {
-  font-weight: normal;
+  display: block;
   margin: 0;
   margin-bottom: 1rem;
   overflow: hidden;
