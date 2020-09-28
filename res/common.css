@@ -1,9 +1,17 @@
 @charset 'utf-8';
-:root[theme = 'light-theme'] {
+:root {
   --color: var(--black);
   --color-accent: var(--white);
   --background: var(--white);
   --background-accent: var(--black);
+  --loading-marker-0: 0 4rem 0 0;
+  --loading-marker-1: 2.82rem 2.82rem 0 0;
+  --loading-marker-2: 4rem 0 0 0;
+  --loading-marker-3: 2.82rem -2.82rem 0 0;
+  --loading-marker-4: 0 -4rem 0 0;
+  --loading-marker-5: -2.82rem -2.82rem 0 0;
+  --loading-marker-6: -4rem 0 0 0;
+  --loading-marker-7: -2.82rem 2.82rem 0 0;
 }
 :root[theme = 'dark-theme'] {
   --color: var(--white);
@@ -42,6 +50,7 @@ body {
 }
 #YFoSPTA3::-webkit-scrollbar {
   height: 0.5rem;
+  width: 0.5rem;
 }
 #YFoSPTA3::-webkit-scrollbar-thumb {
   background: var(--background-accent);
@@ -257,84 +266,92 @@ body {
 }
 @keyframes loading {
   0%, 100% {
-    box-shadow: 0 4rem 0 0 white,
-                2.82rem 2.82rem 0 0 var(--lightgray),
-                4rem 0 0 0 var(--gray),
-                2.82rem -2.82rem 0 0 var(--darkgray),
-                0 -4rem 0 0 var(--darkgray),
-                -2.82rem -2.82rem 0 0 var(--darkgray),
-                -4rem 0 0 0 var(--darkgray),
-                -2.82rem 2.82rem 0 0 var(--darkgray);
+    box-shadow: var(--loading-marker-0) var(--white),
+                var(--loading-marker-1) var(--lightgray),
+                var(--loading-marker-2) var(--gray),
+                var(--loading-marker-3) var(--darkgray),
+                var(--loading-marker-4) var(--darkgray),
+                var(--loading-marker-5) var(--darkgray),
+                var(--loading-marker-6) var(--darkgray),
+                var(--loading-marker-7) var(--darkgray);
   }
   12.5% {
-    box-shadow: 0 4rem 0 0 var(--darkgray),
-                2.82rem 2.82rem 0 0 white,
-                4rem 0 0 0 var(--lightgray),
-                2.82rem -2.82rem 0 0 var(--gray),
-                0 -4rem 0 0 var(--darkgray),
-                -2.82rem -2.82rem 0 0 var(--darkgray),
-                -4rem 0 0 0 var(--darkgray),
-                -2.82rem 2.82rem 0 0 var(--darkgray);
+    box-shadow: var(--loading-marker-0) var(--darkgray),
+                var(--loading-marker-1) var(--white),
+                var(--loading-marker-2) var(--lightgray),
+                var(--loading-marker-3) var(--gray),
+                var(--loading-marker-4) var(--darkgray),
+                var(--loading-marker-5) var(--darkgray),
+                var(--loading-marker-6) var(--darkgray),
+                var(--loading-marker-7) var(--darkgray);
   }
   25% {
-    box-shadow: 0 4rem 0 0 var(--darkgray),
-                2.82rem 2.82rem 0 0 var(--darkgray),
-                4rem 0 0 0 white,
-                2.82rem -2.82rem 0 0 var(--lightgray),
-                0 -4rem 0 0 var(--gray),
-                -2.82rem -2.82rem 0 0 var(--darkgray),
-                -4rem 0 0 0 var(--darkgray),
-                -2.82rem 2.82rem 0 0 var(--darkgray);
+    box-shadow: var(--loading-marker-0) var(--darkgray),
+                var(--loading-marker-1) var(--darkgray),
+                var(--loading-marker-2) var(--white),
+                var(--loading-marker-3) var(--lightgray),
+                var(--loading-marker-4) var(--gray),
+                var(--loading-marker-5) var(--darkgray),
+                var(--loading-marker-6) var(--darkgray),
+                var(--loading-marker-7) var(--darkgray);
   }
   37.5% {
-    box-shadow: 0 4rem 0 0 var(--darkgray),
-                2.82rem 2.82rem 0 0 var(--darkgray),
-                4rem 0 0 0 var(--darkgray),
-                2.82rem -2.82rem 0 0 white,
-                0 -4rem 0 0 var(--lightgray),
-                -2.82rem -2.82rem 0 0 var(--gray),
-                -4rem 0 0 0 var(--darkgray),
-                -2.82rem 2.82rem 0 0 var(--darkgray);
+    box-shadow: var(--loading-marker-0) var(--darkgray),
+                var(--loading-marker-1) var(--darkgray),
+                var(--loading-marker-2) var(--darkgray),
+                var(--loading-marker-3) var(--white),
+                var(--loading-marker-4) var(--lightgray),
+                var(--loading-marker-5) var(--gray),
+                var(--loading-marker-6) var(--darkgray),
+                var(--loading-marker-7) var(--darkgray);
   }
   50% {
-    box-shadow: 0 4rem 0 0 var(--darkgray),
-                2.82rem 2.82rem 0 0 var(--darkgray),
-                4rem 0 0 0 var(--darkgray),
-                2.82rem -2.82rem 0 0 var(--darkgray),
-                0 -4rem 0 0 white,
-                -2.82rem -2.82rem 0 0 var(--lightgray),
-                -4rem 0 0 0 var(--gray),
-                -2.82rem 2.82rem 0 0 var(--darkgray);
+    box-shadow: var(--loading-marker-0) var(--darkgray),
+                var(--loading-marker-1) var(--darkgray),
+                var(--loading-marker-2) var(--darkgray),
+                var(--loading-marker-3) var(--darkgray),
+                var(--loading-marker-4) var(--white),
+                var(--loading-marker-5) var(--lightgray),
+                var(--loading-marker-6) var(--gray),
+                var(--loading-marker-7) var(--darkgray);
   }
   62.5% {
-    box-shadow: 0 4rem 0 0 var(--darkgray),
-                2.82rem 2.82rem 0 0 var(--darkgray),
-                4rem 0 0 0 var(--darkgray),
-                2.82rem -2.82rem 0 0 var(--darkgray),
-                0 -4rem 0 0 var(--darkgray),
-                -2.82rem -2.82rem 0 0 white,
-                -4rem 0 0 0 var(--lightgray),
-                -2.82rem 2.82rem 0 0 var(--gray);
+    box-shadow: var(--loading-marker-0) var(--darkgray),
+                var(--loading-marker-1) var(--darkgray),
+                var(--loading-marker-2) var(--darkgray),
+                var(--loading-marker-3) var(--darkgray),
+                var(--loading-marker-4) var(--darkgray),
+                var(--loading-marker-5) var(--white),
+                var(--loading-marker-6) var(--lightgray),
+                var(--loading-marker-7) var(--gray);
   }
   75% {
-    box-shadow: 0 4rem 0 0 var(--gray),
-                2.82rem 2.82rem 0 0 var(--darkgray),
-                4rem 0 0 0 var(--darkgray),
-                2.82rem -2.82rem 0 0 var(--darkgray),
-                0 -4rem 0 0 var(--darkgray),
-                -2.82rem -2.82rem 0 0 var(--darkgray),
-                -4rem 0 0 0 white,
-                -2.82rem 2.82rem 0 0 var(--lightgray);
+    box-shadow: var(--loading-marker-0) var(--gray),
+                var(--loading-marker-1) var(--darkgray),
+                var(--loading-marker-2) var(--darkgray),
+                var(--loading-marker-3) var(--darkgray),
+                var(--loading-marker-4) var(--darkgray),
+                var(--loading-marker-5) var(--darkgray),
+                var(--loading-marker-6) var(--white),
+                var(--loading-marker-7) var(--lightgray);
   }
   87.5% {
-    box-shadow: 0 4rem 0 0 var(--lightgray),
-                2.82rem 2.82rem 0 0 var(--gray),
-                4rem 0 0 0 var(--darkgray),
-                2.82rem -2.82rem 0 0 var(--darkgray),
-                0 -4rem 0 0 var(--darkgray),
-                -2.82rem -2.82rem 0 0 var(--darkgray),
-                -4rem 0 0 0 var(--darkgray),
-                -2.82rem 2.82rem 0 0 white;
+    box-shadow: var(--loading-marker-0) var(--lightgray),
+                var(--loading-marker-1) var(--gray),
+                var(--loading-marker-2) var(--darkgray),
+                var(--loading-marker-3) var(--darkgray),
+                var(--loading-marker-4) var(--darkgray),
+                var(--loading-marker-5) var(--darkgray),
+                var(--loading-marker-6) var(--darkgray),
+                var(--loading-marker-7) var(--white);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color: var(--white);
+    --color-accent: var(--black);
+    --background: var(--black);
+    --background-accent: var(--white);
   }
 }
 @media screen and (min-width: 1024px) {
