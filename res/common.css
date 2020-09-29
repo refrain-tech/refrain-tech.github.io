@@ -4,6 +4,7 @@
   --color-accent: var(--white);
   --background: var(--white);
   --background-accent: var(--black);
+  --Oj1DovqO-filter: none;
   --loading-marker-0: 0 4rem 0 0;
   --loading-marker-1: 2.82rem 2.82rem 0 0;
   --loading-marker-2: 4rem 0 0 0;
@@ -18,6 +19,7 @@
   --color-accent: var(--black);
   --background: var(--black);
   --background-accent: var(--white);
+  --Oj1DovqO-filter: invert();
 }
 html {
   background: var(--background);
@@ -39,6 +41,7 @@ body {
 }
 #Oj1DovqO {
   display: block;
+  filter: var(--Oj1DovqO-filter);
   max-width: 100%;
 }
 /** Breadcrumbs */
@@ -175,6 +178,7 @@ body {
   position: relative;
 }
 .RaWchbnJ::before {
+  background: var(--white);
   content: '';
   display: block;
   padding-top: 100%;
