@@ -38,6 +38,7 @@ body {
   text-decoration: none;
 }
 #Oj1DovqO {
+  background: var(--white);
   display: block;
   max-width: 100%;
 }
@@ -140,9 +141,10 @@ body {
   width: 50%;
 }
 .TVOxHpZ9 {
-  background: var(--white);
+  background: var(--background);
+  border: solid 0.1rem var(--background-accent);
   border-radius: 1rem;
-  color: var(--black);
+  color: var(--color);
   display: block;
   padding: 1rem;
   margin: 0.5rem;
@@ -174,6 +176,7 @@ body {
   position: relative;
 }
 .RaWchbnJ::before {
+  background: var(--white);
   content: '';
   display: block;
   padding-top: 100%;
