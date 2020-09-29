@@ -22,5 +22,6 @@ const categories = {
   service: 'サービス',
   other: 'その他'
 };
-const { theme } = document.getQueryParameters();
-if (theme === 'dark') document.documentElement.setAttribute('theme', 'dark-theme');
+let { theme } = document.getQueryParameters();
+if (theme !== 'dark') theme = 'light';
+document.documentElement.setAttribute('theme', `${theme}-theme`);
