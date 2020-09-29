@@ -346,14 +346,6 @@ body {
                 var(--loading-marker-7) var(--white);
   }
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color: var(--white);
-    --color-accent: var(--black);
-    --background: var(--black);
-    --background-accent: var(--white);
-  }
-}
 @media screen and (min-width: 1024px) {
   html {
     font-size: 20px;
