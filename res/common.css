@@ -222,14 +222,11 @@ body {
   padding-bottom: 0.5rem;
   text-align: center;
 }
-.B8bMFMni:not(:first-child) {
-  margin-top: 0.5rem;
-}
 .bjIdUiG9 {
   align-items: center;
   color: var(--color-accent);
   display: flex;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
 }
 .bjIdUiG9:hover {
